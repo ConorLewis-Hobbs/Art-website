@@ -1,0 +1,846 @@
+        * {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+        }
+        /*CDB4DB FFC8DD FFAFCC BDE0FE A2D2FF */
+        
+        html {
+            --color-1: #CDB4DB;
+            --color-2: #FFC8DD;
+            --color-3: #FFAFCC;
+            --color-4: #BDE0FE;
+            --color-5: #A2D2FF;
+            --nav-text-color: #102A43;
+            --nav-hover-color: #a0aecd63;
+            --content-background-color: #fffafc;
+            --content-divider-color: #243B53;
+            --content-divider-width: 0.15em;
+            --input-feild-background-color: #f8f8f8;
+            --input-feild-border-color: #ccc;
+            --font-family: 'Roboto', sans-serif;
+            --line-height: 1.5;
+            --background-fallback: #A0AECD;
+            --text-color: #000000;
+            --border-edge-styling: 10px;
+            --curve-box-edge: 2px;
+            --box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+        
+        body {
+            background: var(--background-fallback);
+            background: #654ea3;
+            /* fallback for old browsers */
+            background: -webkit-linear-gradient(to bottom, #A2D2FF, #CDB4DB);
+            /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to bottom, #A2D2FF, #CDB4DB);
+            /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+            font-family: var(--font-family);
+            line-height: var(--line-height);
+            color: var(--text-color);
+        }
+        /* image shadow */
+        
+        img {
+            box-shadow: var(--box-shadow);
+            width: 100%;
+        }
+        
+        .page {
+            max-width: 60em;
+            margin: 1.5em auto;
+            padding: 1em;
+            padding-bottom: 2em;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 0.625em;
+            grid-template-rows: 1fr;
+            background: var(--content-background-color);
+            border-radius: 0.625em;
+            grid-template-areas: "nav" "name-location" "previousDesigns";
+            box-shadow: var(--box-shadow);
+        }
+        
+        .nav {
+            grid-area: nav;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            overflow: hidden;
+            opacity: 0.9;
+            text-decoration: none;
+            border-bottom: 2px solid rgba(0, 0, 0, 0.13);
+        }
+        
+        .nav .right,
+        .nav .left {
+            display: flex;
+        }
+        
+        .nav a,
+        .nav button {
+            color: var(--nav-text-color);
+            padding: 1em 1em;
+            text-align: center;
+            text-decoration: none;
+            transition: background-color 1s ease, color 1s ease;
+            border-radius: var(--curve-box-edge);
+        }
+        
+        .nav a:hover {
+            background-color: var(--nav-hover-color);
+        }
+        
+        .name-location {
+            grid-area: name-location;
+            display: flex;
+            justify-content: left;
+            align-items: center;
+            overflow: hidden;
+            padding-left: 0.5rem;
+            padding-top: 0.5rem;
+            padding-bottom: 0.5rem;
+            font-size: 1.9em;
+        }
+        
+        .name-location h1 {
+            font-size: 1.7rem;
+        }
+        
+        .previousDesigns {
+            grid-area: previousDesigns;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            gap: 5% 1%;
+            grid-auto-flow: row;
+            grid-template-areas: "picOne picTwo picThree picThree" "picFour picFour picFive picsix";
+            text-align: center;
+        }
+        
+        .picOne {
+            grid-area: picOne;
+        }
+        
+        .picTwo {
+            grid-area: picTwo;
+        }
+        
+        .picThree {
+            grid-area: picThree;
+        }
+        
+        .picFour {
+            grid-area: picFour;
+        }
+        
+        .picFive {
+            grid-area: picFive;
+        }
+        
+        .picsix {
+            grid-area: picsix;
+        }
+        /* small images */
+        
+        .previousDesigns img {
+            width: 100%;
+            height: 12.5rem;
+        }
+        /* big images */
+        
+        .previousDesigns .picThree img,
+        .previousDesigns .picFour img {
+            width: 90%;
+            height: 12.5rem;
+        }
+        /* previous designs main */
+        
+        .previousDesignsMain {
+            max-width: 60rem;
+            margin: 1.5rem auto;
+            padding: 1rem;
+            padding-bottom: 2rem;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 0.625rem;
+            grid-template-rows: 1fr;
+            background: var(--content-background-color);
+            border-radius: 0.625rem;
+            grid-template-areas: "nav" "name-location" "previousDesigns";
+            box-shadow: var(--box-shadow)
+        }
+        
+        .previousDesignContent {
+            display: grid;
+            grid-template-columns: 1fr;
+            row-gap: 3.125rem;
+            grid-auto-flow: row;
+            grid-template-areas: "topText" "DiscordIcons" "WoW" "DnD" "BannerImages" "Bottom";
+        }
+        
+        .topText {
+            grid-area: topText;
+            margin-top: 3rem;
+            margin-bottom: 2.5rem;
+            margin-left: 1.5rem;
+            border-bottom: 2px solid rgba(0, 0, 0, 0.596);
+            width: auto;
+        }
+        
+        .DiscordIcons {
+            grid-area: DiscordIcons;
+        }
+        
+        .WoW {
+            grid-area: WoW;
+        }
+        
+        .DnD {
+            grid-area: DnD;
+        }
+        
+        .BannerImages {
+            grid-area: BannerImages;
+        }
+        
+        .Bottom {
+            grid-area: Bottom;
+            text-align: center;
+        }
+        
+        .bottom img {
+            box-shadow: var(--box-shadow);
+        }
+        
+        .previousDesignsMain h2,
+        .previousDesignsMain h3,
+        .previousDesignsMain h4,
+        .previousDesignsMain h5 {
+            font-size: 1.5rem;
+        }
+        
+        .WoW,
+        .DiscordIcons,
+        .DnD,
+        .BannerImages {
+            display: grid;
+            grid-template-columns: 0.3fr 1fr;
+            grid-template-rows: 1fr;
+            grid-auto-flow: row;
+            grid-template-areas: "product description";
+            column-gap: 3.1rem;
+        }
+        
+        .product {
+            grid-area: product;
+        }
+        
+        .description {
+            grid-area: description;
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr 0.2fr;
+            grid-auto-flow: row;
+            grid-template-areas: "descriptionText" "moreInfo";
+        }
+        
+        .descriptionText {
+            grid-area: descriptionText;
+        }
+        
+        .moreInfo {
+            grid-area: moreInfo;
+        }
+        
+        .pullLine p {
+            font-size: 1.6rem;
+            padding-bottom: 1.25rem;
+        }
+        
+        .WoW img,
+        .DiscordIcons img,
+        .DnD img,
+        .BannerImages img {
+            width: 12.5rem;
+            height: 12.5rem;
+            box-shadow: var(--box-shadow);
+        }
+        
+        .previousDesignContent input {
+            padding: 5px 10px;
+            box-sizing: border-box;
+            border: 2px solid var(--input-feild-border-color);
+            border-radius: var(--border-edge-styling);
+            background-color: var(--input-feild-background-color);
+            font-size: 16px;
+            cursor: pointer;
+        }
+        
+        .moreInfo {
+            padding-top: 20px;
+        }
+        /*contact page */
+        
+        .contactMain {
+            max-width: 60em;
+            margin: 1.5em auto;
+            padding: 1em;
+            padding-bottom: 2em;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 0.625em;
+            grid-template-rows: 1fr;
+            background: var(--content-background-color);
+            border-radius: 0.625em;
+            grid-template-areas: "nav" "contact-form";
+            box-shadow: var(--box-shadow);
+        }
+        
+        .contact-form {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(5em, 20em));
+            gap: 10px;
+            grid-auto-rows: minmax(auto, auto);
+            background: var(--content-background-color);
+            padding-left: 20px;
+            padding-bottom: 20px;
+        }
+        
+        .title-form {
+            grid-column: 1/5;
+        }
+        
+        .contact-form-left {
+            grid-column: 1/3;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(5em, 20em));
+            gap: 0.6em;
+            grid-auto-rows: minmax(auto, auto);
+            background: var(--content-background-color);
+            padding-top: 1.25em;
+            padding-bottom: 1.25em;
+            padding-right: 1.25em;
+            grid-template-areas: "name e-mail" "subject subject" "message message";
+        }
+        
+        .name {
+            grid-area: name;
+        }
+        
+        .e-mail {
+            grid-area: e-mail;
+        }
+        
+        .subject {
+            grid-area: subject;
+        }
+        
+        .message {
+            grid-area: message;
+        }
+        
+        .contact-form input {
+            padding: 12px 20px;
+            box-sizing: border-box;
+            border: 2px solid var(--input-feild-border-color);
+            border-radius: var(--border-edge-styling);
+            background-color: var(--input-feild-background-color);
+            font-size: 16px;
+        }
+        
+        textarea {
+            width: 100%;
+            height: 150px;
+            padding: 12px 20px;
+            box-sizing: border-box;
+            border: 2px solid var(--input-feild-border-color);
+            border-radius: var(--border-edge-styling);
+            background-color: var(--input-feild-background-color);
+            font-size: 16px;
+            resize: none;
+        }
+        
+        #send {
+            transition: background-color 1s ease, color 1s ease;
+        }
+        
+        #send:hover {
+            background-color: var(--nav-hover-color);
+            color: var(--nav-text-color);
+            cursor: pointer;
+        }
+        
+        .my-details,
+        .my-address,
+        .my-phone,
+        .my-e-mail,
+        .my-website {
+            grid-column: 1/3;
+            padding: 10px;
+            border-radius: 40px;
+        }
+        
+        .address,
+        .phone,
+        .e-mail-right,
+        .website {
+            font-size: 20px;
+            padding: 10px 0px;
+        }
+        
+        .my-details a {
+            font-size: 16px;
+        }
+        
+        #contactImg {
+            margin-top: 50px;
+            height: 200px;
+            width: 200px;
+            box-shadow: var(--box-shadow);
+        }
+        /* discord icons */
+        
+        .discordIconsMain {
+            max-width: 60em;
+            margin: 2.5em auto;
+            padding: 1em;
+            padding-bottom: 2em;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 0.625em;
+            grid-template-rows: 1fr;
+            background: var(--content-background-color);
+            border-radius: 0.625em;
+            grid-template-areas: "nav" "contact-form"
+        }
+        
+        .discordIconsContent {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr;
+            gap: 0px 0px;
+            grid-auto-flow: row;
+            grid-template-areas: "disocordTop disocordTop disocordTop" "discord-pic discordMid discordMid" "discordBottom discordBottom discordBottom";
+        }
+        
+        .disocordTop {
+            grid-area: disocordTop;
+        }
+        
+        .discordMid {
+            grid-area: discordMid;
+        }
+        
+        .discordBottom {
+            grid-area: discordBottom;
+        }
+        
+        .discord-pic {
+            grid-area: discord-pic;
+        }
+        /* wow characetrs */
+        
+        .WoWCharactersContent {
+            max-width: 60em;
+            margin: 2.5em auto;
+            padding: 1em;
+            padding-bottom: 2em;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 0.625em;
+            grid-template-rows: 1fr;
+            background: var(--content-background-color);
+            border-radius: 0.625em;
+            grid-template-areas: "nav" "contact-form" "previousDesigns"
+        }
+        
+        .discordIconsContent {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr;
+            gap: 0px 0px;
+            grid-auto-flow: row;
+            grid-template-areas: "disocordTop disocordTop disocordTop" "discord-pic discordMid discordMid" "discordBottom discordBottom discordBottom";
+        }
+        
+        .disocordTop {
+            grid-area: disocordTop;
+        }
+        
+        .discordMid {
+            grid-area: discordMid;
+        }
+        
+        .discordBottom {
+            grid-area: discordBottom;
+        }
+        
+        .discord-pic {
+            grid-area: discord-pic;
+        }
+        
+        .designContent h1,
+        .designContent h2,
+        .designContent h3,
+        .designContent h4,
+        .designContent h5,
+        .designContent h6 {
+            font-size: 24px;
+        }
+        
+        .designContent p {
+            margin-bottom: 20px;
+        }
+        
+        #models {
+            box-shadow: var(--box-shadow);
+            margin-bottom: 20px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 50%;
+        }
+        
+        #characterRig {
+            box-shadow: var(--box-shadow);
+            margin-bottom: 20px;
+            margin-right: 20px;
+            float: left;
+            height: 230px;
+            width: 200px;
+        }
+        
+        #DnDBanner {
+            height: 300px;
+            width: 100%;
+            box-shadow: var(--box-shadow);
+            margin-top: 20px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .pageBannerImages {
+            max-width: 60em;
+            margin: 1.5em auto;
+            padding: 1em;
+            padding-bottom: 2em;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 0.625em;
+            grid-template-rows: 1fr;
+            background: var(--content-background-color);
+            border-radius: 0.625em;
+            grid-template-areas: "nav" "name-location" "bannerImagesContent";
+            box-shadow: var(--box-shadow);
+        }
+        
+        .bannerImagesContent {
+            grid-area: bannerImagesContent;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 0px 0px;
+            grid-auto-flow: row;
+            grid-template-areas: "bannerOne" "bannerTwo" "bannerThree";
+        }
+        
+        .img-title h2,
+        .img-title h3,
+        .img-title h4 {
+            padding-bottom: 10px;
+        }
+        
+        .bannerOne {
+            grid-area: bannerOne;
+        }
+        
+        .bannerTwo {
+            grid-area: bannerTwo;
+        }
+        
+        .bannerThree {
+            grid-area: bannerThree;
+        }
+        
+        .bannerImagesContent img {
+            width: 58em;
+            max-height: 400px;
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+        
+        .bannerImagesContent h2,
+        .bannerImagesContent h3,
+        .bannerImagesContent h4 {
+            font-size: 24px;
+        }
+        
+        .dropdown .dropbtn {
+            color: var(--nav-text-color);
+            padding: 1.11em 1em;
+            text-align: center;
+            text-decoration: none;
+            transition: background-color 1s ease, color 1s ease;
+            font-size: 18px;
+            border: none;
+            cursor: pointer;
+            background-color: transparent;
+            border-radius: 2px;
+        }
+        
+        .navbar a:hover,
+        .dropdown:hover .dropbtn {
+            background-color: #a0aecd63;
+        }
+        
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #ffffff;
+            width: 170px;
+            box-shadow: var(--border-edge-styling);
+            z-index: 1;
+        }
+        
+        .dropdown-content a {
+            padding: 10px 15px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+            box-shadow: var(--border-edge-styling);
+        }
+        
+        .dropdown-content a:hover {
+            background-color: var(--nav-hover-color);
+        }
+        
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        
+        .navigation-mobile {
+            display: none;
+        }
+        
+        .navigation-overlay.closed {
+            display: none;
+        }
+        
+        .mediaQSmall {
+            display: none;
+        }
+        /* media queries  */
+        
+        @media only screen and (max-width: 850px) {
+            .nav {
+                max-width: 53em;
+                overflow: hidden;
+            }
+            .previousDesigns img {
+                max-width: 100%;
+            }
+            .previousDesigns .picThree img,
+            .previousDesigns .picFour img {
+                max-width: 100%;
+            }
+            .bottom img {
+                max-width: 100%;
+                width: 60%;
+                height: auto;
+            }
+            .WoW,
+            .DiscordIcons,
+            .DnD,
+            .BannerImages {
+                display: grid;
+                grid-template-columns: 0.3fr 1fr;
+                grid-template-rows: 0fr 1fr;
+                grid-auto-flow: row;
+                grid-template-areas: "product description";
+                column-gap: 50px;
+            }
+            #contactImg {
+                display: none;
+            }
+            .contact-form {
+                display: unset;
+                padding-bottom: 0;
+                padding-left: 0;
+            }
+            .contact-form-left {
+                background: var(--content-background-color);
+                display: grid;
+                grid-template-columns: 1fr;
+                grid-template-rows: 0.2fr 0.2fr 0.2fr 1fr 0.2fr;
+                gap: 0px 0px;
+                grid-auto-flow: row;
+                grid-template-areas: "name" "e-mail" "subject" "message" "submit";
+                width: 100%;
+                padding-bottom: 0;
+                padding-right: 0;
+            }
+            .name {
+                grid-area: name;
+            }
+            .e-mail {
+                grid-area: e-mail;
+            }
+            .subject {
+                grid-area: subject;
+            }
+            .message {
+                grid-area: message;
+            }
+            .submit {
+                grid-area: submit;
+            }
+            .name,
+            .e-mail,
+            .subject,
+            .message,
+            .submit {
+                margin-top: 5px;
+                margin-bottom: 5px;
+            }
+            .previousDesignContent {
+                row-gap: 1em;
+            }
+            .topText {
+                margin-left: 10px;
+                margin-top: 1em;
+                margin-bottom: 1em;
+                width: auto;
+            }
+            .topText h1 {
+                font-size: 1.5em;
+            }
+            .WoW,
+            .DiscordIcons,
+            .DnD,
+            .BannerImages {
+                display: grid;
+                grid-template-columns: 1fr;
+                grid-template-rows: 0.3 1fr;
+                grid-auto-flow: row;
+                grid-template-areas: "product""description";
+                column-gap: 50px;
+            }
+            .product img {
+                display: none;
+            }
+            /* .descriptionText {
+                display: flex;
+            } */
+            .mediaQSmall {
+                display: flex;
+                float: right;
+                padding-left: 2%;
+            }
+        }
+        /* hide the desktop nav and show mobile nav at < 500px width */
+        
+        @media all and (max-width: 500px) {
+            .navigation-mobile {
+                display: flex;
+            }
+            .nav {
+                display: none;
+            }
+            .navigation-overlay {
+                z-index: 1;
+                border-bottom-left-radius: var(--border-edge-styling);
+                border-bottom-right-radius: var(--border-edge-styling);
+                margin-top: -7px;
+                background-color: var(--color-5);
+            }
+            .navigation-mobile {
+                display: flex;
+                flex-direction: column;
+            }
+            .navigation-mobile-toggle {
+                padding-left: 5%;
+                background-color: var(--color-5);
+                width: 100%;
+                border-radius: var(--border-edge-styling);
+            }
+            #mobile-nav-items {
+                text-decoration: none;
+            }
+            #mobile-nav-items a {
+                text-decoration: none;
+                display: flex;
+                flex-direction: column;
+                padding-top: 3%;
+                padding-bottom: 3%;
+                padding-left: 3%;
+            }
+            .name-location h1 {
+                font-size: 20px;
+            }
+            .previousDesigns {
+                grid-area: previousDesigns;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: 1fr 1fr 1fr 1fr;
+                gap: 1% 1%;
+                grid-auto-flow: row;
+                grid-template-areas: "picOne picTwo" "picThree picThree" "picFour picFour" "picFive picsix";
+                text-align: center;
+            }
+            /* design process*/
+            .designContent {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
+            #models,
+            #DnDBanner {
+                width: 100%;
+            }
+            #characterRig {
+                box-shadow: var(--box-shadow);
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                width: 50%;
+                float: none;
+                height: 230px;
+            }
+            #DnDBanner {
+                height: 200px;
+            }
+        }
+        
+        @media all and (max-width: 376px) {
+            .descriptionText {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
+            .mediaQSmall {
+                margin-bottom: 5%;
+            }
+            .moreInfo {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            /* .previousDesignContent {
+                row-gap: 0;
+                padding-bottom: 0;
+                grid-template-rows: 0fr 1fr 1fr 0.5fr 0.2fr;
+            } */
+            .topText {
+                display: none;
+            }
+            .pullLine p {
+                font-size: 1.3rem;
+            }
+            .bottom {
+                margin-top: 5%;
+            }
+        }

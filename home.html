@@ -1,0 +1,89 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div class="page">
+        <div class="nav" class="overlay" id="nav">
+            <div class="left">
+                <a href="./home.html">Kizune</a>
+            </div>
+            <div class="right">
+                <div class="dropDown">
+                    <button href="/designOptions.html" class="dropbtn">Design options
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="/designOptions.html">Overview</a>
+                        <a href="/DiscordIcons.html">Discord Icons</a>
+                        <a href="/WoWCharacters.html">WoW characters</a>
+                        <a href="/DnDCharacters.html">DnD characters</a>
+                        <a href="/BannerImages.html">Banner images</a>
+                    </div>
+                </div>
+                <a href="./designProcess.html">Design Process</a>
+                <a href="./contact.html">Contact</a>
+            </div>
+        </div>
+        <div class="navigation-mobile">
+            <div class="navigation-mobile-toggle">
+                <i class="fa fa-bars fa-2x"></i>
+            </div>
+
+            <div class="navigation-overlay closed" id="mobile-nav-items">
+                <a href="./designOptions.html">Design options</a>
+                <a href="./designProcess.html">Design Process</a>
+                <a href="./contact.html">Contact</a>
+            </div>
+        </div>
+
+        <div class="name-location">
+            <h1>Kiterina is a photographer & <br>graphic designer based in Pouri, Finland.</h1>
+        </div>
+        <div class="previousDesigns">
+            <div class="picOne">
+                <img src="/images/Cats/Cats.png" alt="Picture of two cats cuddling">
+            </div>
+            <div class="picTwo">
+                <img src="/images/WoW chracters/Troll.png" alt="Custom made troll">
+            </div>
+            <div class="picThree">
+                <img src="/images/WoW chracters/goblin/Goblin frame.png" alt="Custom made goblin and goblins design rigging">
+            </div>
+            <div class="picFour">
+                <img src="/images/DnD project/Project DnD finished2.png" alt="DnD group banner">
+            </div>
+            <div class="picFive">
+                <img src="/images/WoW chracters/Tauren.png" alt="Custom made tauren">
+            </div>
+            <div class="picsix">
+                <img src="/images/Discord icon sloth.png" alt="Custom made discord sloth icon">
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    const toggle = document.querySelector('.navigation-mobile-toggle');
+    const overlay = document.querySelector('.navigation-overlay');
+    const rotateFlav = document.querySelector('.fa fa-caret-down');
+
+    toggle.addEventListener('click', () => {
+        if (overlay.classList.contains('closed')) {
+            overlay.classList.remove('closed')
+        } else {
+            overlay.classList.add('closed');
+        }
+    })
+</script>
+
+</html>

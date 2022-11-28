@@ -1,0 +1,92 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div class="contactMain">
+        <div class="nav" class="overlay" id="nav">
+            <div class="left">
+                <a href="./home.html">Kizune</a>
+            </div>
+            <div class="right">
+                <div class="dropDown">
+                    <button href="/designOptions.html" class="dropbtn">Design options
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="/designOptions.html">Overview</a>
+                        <a href="/DiscordIcons.html">Discord Icons</a>
+                        <a href="/WoWCharacters.html">WoW characters</a>
+                        <a href="/DnDCharacters.html">DnD characters</a>
+                        <a href="/BannerImages.html">Banner images</a>
+                    </div>
+                </div>
+                <a href="./designProcess.html">Design Process</a>
+                <a href="./contact.html">Contact</a>
+            </div>
+        </div>
+        <div class="navigation-mobile">
+            <div class="navigation-mobile-toggle">
+                <i class="fa fa-bars fa-2x"></i>
+            </div>
+
+            <div class="navigation-overlay closed" id="mobile-nav-items">
+                <a href="./home.html">Home</a>
+                <a href="./designOptions.html">Design options</a>
+                <a href="./contact.html">Contact</a>
+            </div>
+        </div>
+        <div class="designContent">
+            <div class="stepOne">
+                <h1>Consultation</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime voluptates consectetur nesciunt vero, magnam at assumenda delectus sequi, rerum accusamus voluptas voluptatem cumque cum alias ut? Corrupti accusamus vitae maiores!</p>
+            </div>
+            <div class="stepTwo">
+                <h2>Design phase</h2>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus perferendis repellat similique dolorem corporis! Nesciunt, sunt eligendi? Consequatur id facilis inventore soluta aspernatur, quasi eligendi vero nam quod, iusto ducimus!</p>
+                <img id="models" src="/images/DnD project/project DnD minatures.png" alt="Models of the characters">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum saepe veritatis, maxime accusamus ea, illo sunt nihil cum beatae quod nesciunt culpa! Numquam commodi eos architecto saepe facilis neque eum?</p>
+            </div>
+            <div class="stepThree">
+                <h3>Producation</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe sed eaque adipisci nulla amet? Aperiam nobis ipsam suscipit sed, animi aliquam. Praesentium recusandae ducimus aut quasi beatae eos, sed perferendis?</p>
+                <img id="characterRig" src="/images/DnD project/characterRig.png" alt="Drawn character rig">
+            </div>
+            <div class="stepFour">
+                <h4>Final checks</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, eaque? Quibusdam corporis quae similique dolor, iusto cupiditate nobis eveniet nostrum! Inventore cumque, assumenda ducimus quos veritatis animi autem quidem facilis.</p>
+            </div>
+            <div class="StepFive">
+                <h5>Handover</h5>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, corporis id a ullam odio repellat ipsa! Unde fuga cum dolores officiis, doloremque commodi magnam veritatis saepe adipisci, aut laudantium nostrum.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, corporis id a ullam odio repellat ipsa! Unde fuga cum dolores officiis, doloremque commodi magnam veritatis saepe adipisci, aut laudantium nostrum.</p>
+                <img id="DnDBanner" src="/images/DnD project/Project DnD finished2.png" alt="Compleated banner picture of all the characters together">
+            </div>
+        </div>
+    </div>
+    <script>
+        const toggle = document.querySelector('.navigation-mobile-toggle');
+        const overlay = document.querySelector('.navigation-overlay');
+        const rotateFlav = document.querySelector('.fa fa-caret-down');
+
+        toggle.addEventListener('click', () => {
+            if (overlay.classList.contains('closed')) {
+                overlay.classList.remove('closed')
+            } else {
+                overlay.classList.add('closed');
+            }
+        })
+    </script>
+</body>

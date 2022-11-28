@@ -1,0 +1,82 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div class="contactMain">
+        <div class="nav" class="overlay" id="nav">
+            <div class="left">
+                <a href="./home.html">Kizune</a>
+            </div>
+            <div class="right">
+                <div class="dropDown">
+                    <button href="/designOptions.html" class="dropbtn">Design options
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="/designOptions.html">Overview</a>
+                        <a href="/DiscordIcons.html">Discord Icons</a>
+                        <a href="/WoWCharacters.html">WoW characters</a>
+                        <a href="/DnDCharacters.html">DnD characters</a>
+                        <a href="/BannerImages.html">Banner images</a>
+                    </div>
+                </div>
+                <a href="./designProcess.html">Design Process</a>
+                <a href="./contact.html">Contact</a>
+            </div>
+        </div>
+        <div class="navigation-mobile">
+            <div class="navigation-mobile-toggle">
+                <i class="fa fa-bars fa-2x"></i>
+            </div>
+
+            <div class="navigation-overlay closed" id="mobile-nav-items">
+                <a href="./home.html">Home</a>
+                <a href="./designOptions.html">Design options</a>
+                <a href="./designProcess.html">Design Process</a>
+            </div>
+        </div>
+        <div class="contact-form">
+            <div class="title-form">
+                <h1>Get in touch</h1>
+                <p>To get in contact with me regarding the prodction of any art work, please fill out the form below.</p>
+            </div>
+            <form class="contact-form-left" action="#" action="POST">
+                <input class="name" type="text" name="name" id="name" placeholder="Name" required minlength="2" maxlength="100" required>
+                <input class="e-mail" type="text" name="e-mail" id="e-mail" placeholder="E-mail" required minlength="5" maxlength="62" required>
+                <input class="subject" type="text" name="subject" id="subject" placeholder="Subject" required minlength="5" maxlength="50" required>
+                <textarea class="message" id="message" name="message" rows="5" cols="30" placeholder="Enter e-mail content" required minlength="20" maxlength="10000" required></textarea>
+                <input class="submit" id="send" type="submit" value="Send">
+            </form>
+            <div class="contact-form-right">
+                <img id="contactImg" src="/images/Cats/Cats with eye drawings.png" alt="Cats with big eyes">
+            </div>
+        </div>
+</body>
+<script>
+    const toggle = document.querySelector('.navigation-mobile-toggle');
+    const overlay = document.querySelector('.navigation-overlay');
+    const rotateFlav = document.querySelector('.fa fa-caret-down');
+
+    toggle.addEventListener('click', () => {
+        if (overlay.classList.contains('closed')) {
+            overlay.classList.remove('closed')
+        } else {
+            overlay.classList.add('closed');
+        }
+    })
+</script>
+
+</html>
